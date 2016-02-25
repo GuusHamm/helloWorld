@@ -3,11 +3,35 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
->
-    <TextView
-            android:layout_width="fill_parent"
+              android:weightSum="1">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:focusable="false">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello World"
+                    android:id="@+id/button" android:enabled="true"
+                    android:layout_gravity="center_horizontal"/>
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I&apos;m a Rebel"
+                    android:id="@+id/rebelSwitch" android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </FrameLayout>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:id="@+id/listView" android:layout_gravity="center_horizontal"/>
+    <TextClock
+            android:layout_width="113dp"
             android:layout_height="wrap_content"
-            android:text="Hello World, HelloWorldActivity"
-    />
+            android:id="@+id/textClock" android:layout_gravity="center_horizontal" android:layout_weight="0.50"
+            android:textSize="25dp"/>
 </LinearLayout>
 
